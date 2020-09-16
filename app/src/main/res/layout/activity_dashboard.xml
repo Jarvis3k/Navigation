@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:id="@+id/drawerLayout"
     android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    tools:openDrawer="right">
 
     <include
         layout="@layout/layout_dashboard"
@@ -19,13 +19,15 @@
         android:id="@+id/navigationView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="start">
+        android:background="#707076"
+        android:layout_gravity="right"
+        tools:ignore="RtlHardcoded">
 
         <include
-            layout="@layout/layout_side_menu"
             android:id="@+id/layout_side_menu"
+            layout="@layout/layout_side_menu"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
 
     </com.google.android.material.navigation.NavigationView>
 

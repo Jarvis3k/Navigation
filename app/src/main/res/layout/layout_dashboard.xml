@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#000">
+    android:background="#404040">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_hamburger_top"
@@ -50,9 +50,12 @@
         android:id="@+id/navigationBar"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:layout_marginTop="4dp"
         android:contentDescription="Navigation Bar"
         android:src="@drawable/ic_navigation_bar_white"
-        app:layout_constraintTop_toTopOf="@id/gl_hamburger_top"
-        app:layout_constraintStart_toStartOf="@id/gl_hamburger_start" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.894"
+        app:layout_constraintStart_toStartOf="@id/gl_hamburger_start"
+        app:layout_constraintTop_toTopOf="@id/gl_hamburger_top" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

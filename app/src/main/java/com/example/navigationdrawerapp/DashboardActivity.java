@@ -14,10 +14,10 @@ import com.google.android.material.navigation.NavigationView;
 public class DashboardActivity extends Activity implements View.OnClickListener {
 
     DrawerLayout drawerLayout;
-    ImageView navigationBar,iv_logout;
+    ImageView navigationBar;
     LinearLayout ll_First,ll_Second,ll_Third,ll_Fourth,ll_Fifth,ll_Sixth,ll_Seventh;
     NavigationView navigationView;
-    TextView tv_logout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,7 @@ public class DashboardActivity extends Activity implements View.OnClickListener 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         navigationView = (NavigationView) findViewById(R.id.navigationView);
 
-        drawerLayout.openDrawer(GravityCompat.START);
+        drawerLayout.openDrawer(GravityCompat.END);
 
         navigationBar = (ImageView) findViewById(R.id.navigationBar);
         ll_First = (LinearLayout) findViewById(R.id.ll_First);
@@ -42,9 +42,6 @@ public class DashboardActivity extends Activity implements View.OnClickListener 
         ll_Sixth = (LinearLayout) findViewById(R.id.ll_Sixth);
         ll_Seventh = (LinearLayout) findViewById(R.id.ll_Seventh);
 
-        iv_logout = (ImageView) findViewById(R.id.iv_logout);
-        tv_logout = (TextView) findViewById(R.id.tv_logout);
-
         navigationBar.setOnClickListener(this);
         ll_First.setOnClickListener(this);
         ll_Second.setOnClickListener(this);
@@ -53,8 +50,6 @@ public class DashboardActivity extends Activity implements View.OnClickListener 
         ll_Fifth.setOnClickListener(this);
         ll_Sixth.setOnClickListener(this);
         ll_Seventh.setOnClickListener(this);
-        iv_logout.setOnClickListener(this);
-        tv_logout.setOnClickListener(this);
     }
 
     @Override
@@ -91,14 +86,7 @@ public class DashboardActivity extends Activity implements View.OnClickListener 
                 showToast("ll_Seventh");
                 drawerLayout.closeDrawer(navigationView, true);
                 break;
-            case R.id.iv_logout:
-                showToast("iv_logout");
-                drawerLayout.closeDrawer(navigationView, true);
-                break;
-            case R.id.tv_logout:
-                showToast("tv_logout");
-                drawerLayout.closeDrawer(navigationView, true);
-                break;
+
             default:
                 showToast("Default");
                 drawerLayout.closeDrawer(navigationView, true);

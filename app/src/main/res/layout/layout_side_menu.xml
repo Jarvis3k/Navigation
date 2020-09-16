@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:background="#ffff"
     android:layout_height="match_parent"
     android:scrollbars="none">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -25,236 +27,325 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.95" />
 
-        <include
-            android:id="@+id/header_dashboard"
-            layout="@layout/header_menu"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
 
         <LinearLayout
             android:id="@+id/ll_menu"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="448dp"
+            android:layout_height="554dp"
+            android:layout_marginTop="36dp"
+            android:background="#ffff"
             android:gravity="start|center"
             android:orientation="vertical"
-            app:layout_constraintTop_toBottomOf="@id/header_dashboard"
-            app:layout_constraintStart_toStartOf="@id/gl_hamburger_start"
-            app:layout_constraintEnd_toEndOf="@id/gl_hamburger_end">
+            app:layout_constraintEnd_toEndOf="@id/gl_hamburger_end"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
                 android:id="@+id/ll_First"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_height="74dp"
+                android:background="#E0E0E0"
                 android:gravity="start|center"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="69dp"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="15dp"
                     android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
                     android:contentDescription="First Image"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_star_blue" />
+                    android:src="@drawable/ic_action_search" />
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/l_First"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="First"
-                    android:textSize="15sp"
-                    />
+                    android:layout_marginTop="5dp"
+                    android:gravity="start|center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Search"
+                        android:textColor="#404040"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Search chat history"
+                        android:textColor="#707076"
+                        android:textSize="15sp" />
+                </LinearLayout>
 
             </LinearLayout>
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:gravity="start|center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Title"
-                    android:textSize="30sp"
-                    />
-
-            </RelativeLayout>
 
             <LinearLayout
                 android:id="@+id/ll_Second"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_height="74dp"
+                android:layout_marginTop="5dp"
+                android:background="#E0E0E0"
                 android:gravity="start|center"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="69dp"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="15dp"
                     android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
                     android:contentDescription="Second Image"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_star_blue" />
+                    android:src="@drawable/ic_action_bookmark" />
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/l_secoond"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Second"
-                    android:textSize="15sp"
-                    />
+                    android:layout_marginTop="5dp"
+                    android:gravity="start|center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Case Setting"
+                        android:textColor="#404040"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Manage case details"
+                        android:textColor="#707076"
+                        android:textSize="15sp" />
+                </LinearLayout>
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/ll_Third"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_height="74dp"
+                android:background="#E0E0E0"
                 android:gravity="start|center"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="69dp"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="15dp"
                     android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
                     android:contentDescription="Third Image"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_star_blue" />
+                    android:src="@drawable/ic_action_member" />
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/l_third"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Third"
-                    android:textSize="15sp"
-                    />
+                    android:layout_marginTop="5dp"
+                    android:gravity="start|center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Member Setting"
+                        android:textColor="#404040"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Manage or invite case members"
+                        android:textColor="#707076"
+                        android:textSize="15sp" />
+                </LinearLayout>
 
             </LinearLayout>
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:gravity="start|center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Title"
-                    android:textSize="30sp"
-                    />
-
-            </RelativeLayout>
 
             <LinearLayout
                 android:id="@+id/ll_Fourth"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_height="74dp"
+                android:background="#E0E0E0"
                 android:gravity="start|center"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="69dp"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="15dp"
                     android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
                     android:contentDescription="Fourth Image"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_star_blue" />
+                    android:src="@drawable/ic_action_send" />
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/l_fourth"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Fourth"
-                    android:textSize="15sp"
-                    />
+                    android:layout_marginTop="5dp"
+                    android:gravity="start|center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Send Setting"
+                        android:textColor="#404040"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Set delay send or schedule send"
+                        android:textColor="#707076"
+                        android:textSize="15sp" />
+                </LinearLayout>
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/ll_Fifth"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_height="74dp"
+                android:background="#E0E0E0"
                 android:gravity="start|center"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="69dp"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="15dp"
                     android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
                     android:contentDescription="Fifth Image"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_star_blue" />
+                    android:src="@drawable/ic_action_recipitient" />
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/l_fift"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Fifth"
-                    android:textSize="15sp"
-                    />
+                    android:layout_marginTop="5dp"
+                    android:gravity="start|center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Recipient Setting"
+                        android:textColor="#404040"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Create sub channel for case"
+                        android:textColor="#707076"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/ll_Sixth"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_height="74dp"
+                android:layout_marginTop="5dp"
+                android:background="#E0E0E0"
                 android:gravity="start|center"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="69dp"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="15dp"
                     android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
                     android:contentDescription="Sixth Image"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_star_blue" />
+                    android:src="@drawable/ic_action_close" />
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/l_sixth"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Sixth"
-                    android:textSize="15sp"
-                    />
+                    android:layout_marginTop="5dp"
+                    android:gravity="start|center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Close Case"
+                        android:textColor="#404040"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Close and archive case"
+                        android:textColor="#707076"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/ll_Seventh"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_height="74dp"
+                android:background="#E0E0E0"
                 android:gravity="start|center"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="69dp"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="15dp"
                     android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
                     android:contentDescription="Seveth Image"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_star_blue" />
+                    android:src="@drawable/ic_action_delete" />
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/l_seventh"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Seveth"
-                    android:textSize="15sp"
-                    />
+                    android:layout_marginTop="5dp"
+                    android:gravity="start|center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Delete case"
+                        android:textColor="#404040"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Clear all mesages and files"
+                        android:textColor="#707076"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
 
             </LinearLayout>
 
